@@ -35,4 +35,17 @@ func main() {
 	fmt.Println(studyGroup)
 	fmt.Println("The sorted Names are", s)
 	fmt.Println("The sorted integers are", n)
+
+	// searching a slice
+
+	x := 4
+
+	i := sort.Search(len(n), func(i int) bool {
+		return n[i] >= x
+	})
+	if i < len(n) && n[i] == x {
+		fmt.Printf("found %d at index %d in %v \n", x, i, n)
+	} else {
+		fmt.Printf("%d not found in %v\n", x, n)
+	}
 }
