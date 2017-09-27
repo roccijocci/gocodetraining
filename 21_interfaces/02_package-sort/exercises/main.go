@@ -21,6 +21,7 @@ func (p people) Swap(i, j int) {
 func (p people) Less(i, j int) bool {
 	return p[i] < p[j]
 }
+
 func main() {
 	//noticed it treats Uppercase and lowercase differently
 	studyGroup := people{"Zeno", "Yvonne", "Gabriel", "John", "Albert", "Jenny"}
@@ -30,11 +31,13 @@ func main() {
 	fmt.Println(s)
 	fmt.Println(studyGroup)
 	sort.Ints(n)
+	// w := sort.Sort(sort.Reverse(sort.IntSlice(n)))
 	sort.Strings(s)
 	sort.Sort(studyGroup)
 	fmt.Println(studyGroup)
 	fmt.Println("The sorted Names are", s)
 	fmt.Println("The sorted integers are", n)
+	// fmt.Println("The reverse sorted integers are", w)
 
 	// searching a slice
 
