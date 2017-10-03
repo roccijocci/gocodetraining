@@ -18,11 +18,16 @@ func (p person) String() string {
 // the Age field.
 type ByAge []person
 
-func (a ByAge) Len() int           { return len(a) }
-func (a ByAge) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a ByAge) Len() int      { return len(a) }
+func (a ByAge) Swap(i, j int) { a[i], a[j] = a[j], a[i] }
+
 func (a ByAge) Less(i, j int) bool { return a[i].Age < a[j].Age }
 
-//func (a ByAge) Less(i, j int) bool { return a[i].Name < a[j].Name }
+// func (a ByAge) Less(i, j int) bool {
+// 	return a[i].Name < a[j].Name && a[i].Age < a[j].Age
+// }
+
+// func (a ByAge) Less(i, j int) bool { return a[i].Name < a[j].Name }
 
 func main() {
 	people := []person{
@@ -30,9 +35,11 @@ func main() {
 		{"John", 42},
 		{"Michael", 17},
 		{"Jenny", 26},
+		{"Zion", 25},
 	}
 
 	fmt.Println(people[0])
+	fmt.Printf("%T \n", people[0])
 	fmt.Println(people)
 	sort.Sort(ByAge(people))
 	fmt.Println(people)
