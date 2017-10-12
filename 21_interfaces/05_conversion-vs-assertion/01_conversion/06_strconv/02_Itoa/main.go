@@ -7,7 +7,10 @@ import (
 
 func main() {
 	x := 12
+	// w := strconv.Itoa(x)
 	y := "I have this many: " + strconv.Itoa(x)
 	fmt.Println(y)
-	//	fmt.Println("I have this many: ", strconv.Itoa(x), x)
+	// fmt.Printf("%T\n", w)
+	// fmt.Println(w)
+	// fmt.Println("I have this many: ", strconv.Itoa(x), x)
 }

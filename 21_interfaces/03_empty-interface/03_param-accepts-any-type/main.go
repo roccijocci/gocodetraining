@@ -4,6 +4,8 @@ import "fmt"
 
 type animal struct {
 	sound string
+	fur   bool
+	name  string
 }
 
 type dog struct {
@@ -18,11 +20,12 @@ type cat struct {
 
 func specs(a interface{}) {
 	fmt.Println(a)
+	fmt.Printf("%T  \n", a)
 }
 
 func main() {
-	fido := dog{animal{"woof"}, true}
-	fifi := cat{animal{"meow"}, true}
+	fido := dog{animal{"woof", false, "offsteven"}, true}
+	fifi := cat{animal{"meow", true, "offgwen"}, true}
 	specs(fido)
 	specs(fifi)
 }

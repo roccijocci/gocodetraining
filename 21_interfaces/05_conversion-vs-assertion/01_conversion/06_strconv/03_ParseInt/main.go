@@ -14,6 +14,7 @@ func main() {
 	u, _ := strconv.ParseUint("42", 10, 64)
 
 	fmt.Println(b, f, i, u)
+	// fmt.Printf("%T", b, f, i, u)
 
 	//	FormatBool, FormatFloat, FormatInt, and FormatUint convert values to strings:
 	w := strconv.FormatBool(true)

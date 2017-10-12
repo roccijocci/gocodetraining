@@ -24,4 +24,6 @@ func info(s shape) {
 func main() {
 	c := circle{5}
 	info(&c)
+	//for clarification purposes
+	// info(c)
 }

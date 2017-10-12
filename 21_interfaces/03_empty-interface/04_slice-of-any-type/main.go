@@ -22,4 +22,5 @@ func main() {
 	shadow := dog{animal{"woof"}, true}
 	critters := []interface{}{fido, fifi, shadow}
 	fmt.Println(critters)
+	fmt.Printf("%T \n ", critters)
 }
